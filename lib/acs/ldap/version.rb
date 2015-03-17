@@ -1,0 +1,5 @@
+module Acs
+  module Ldap
+    VERSION = "0.0.1"
+  end
+end
