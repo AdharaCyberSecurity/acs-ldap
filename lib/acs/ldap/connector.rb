@@ -30,34 +30,6 @@ class Acs::Ldap::Connector
     ldap_params
   end
 
-=begin
-  def search(base = nil, filter = nil, attributes = nil)
-    entries = []
-    logger.info "Search base '#{base}' filter '#{filter}' attributes '#{attributes}'"
-    if base.nil?
-      get_connection.search()
-    else
-      if filter.nil?
-        get_connection.search(base: base)
-      else
-        if attributes.nil?
-          get_connection.search(base: base, filter: filter) do |entry|
-            entries << entry
-          end
-        else
-          logger.debug "Search with filter and attributes"
-          get_connection.search(base: base, filter: filter, attributes: attributes) do |entry|
-            entries << entry
-          end
-        end
-      end
-    end
-    result = Acs::Ldap::Result.new(get_connection.get_operation_result, entries)
-    logger.info "Search result #{result}"
-    result
-  end
-=end
-
   def search(options = {})
     base        = options[:base] || nil
     filter      = options[:filter] || nil # instance of Net::LDAP::Filter

@@ -68,6 +68,10 @@ class Acs::Ldap::Model
     count
   end
 
+  def exist?(model)
+    @connector.search({base: dn(model)}).data.length > 0
+  end
+
 protected
 
   def logger

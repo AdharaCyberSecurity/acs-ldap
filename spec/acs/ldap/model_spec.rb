@@ -28,6 +28,14 @@ describe Acs::Ldap::Model, order: :defined do
     expect(@user_model.count).to eq 0
   end
 
+  it "should be possible to check if a User exists" do
+    @user_model.flush
+    expect(@user_model.exist?(@user)).to eq false
+    @user_model.create(@user)
+    expect(@user_model.exist?(@user)).to eq true
+    @user_model.flush
+  end
+
   class UserModel < Acs::Ldap::Model
     def initialize(connector, ou = nil)
       @ou = ou || 'people'
