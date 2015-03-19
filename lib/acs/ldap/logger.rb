@@ -75,7 +75,7 @@ class Acs::Ldap::Logger < ::Logger
     end
 
     def self.file_name
-      file_name_no_ext + ".log"
+      file_name_noext + ".log"
     end
 
 end
