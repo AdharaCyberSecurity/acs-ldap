@@ -55,8 +55,11 @@ class Acs::Ldap::Logger < ::Logger
     end
 
     def self.file_path
-      #Rails.root.join("log", file_name).to_s
-      [Dir.pwd, "log", file_name].join("/").to_s
+      if Rails.root.present?
+        Rails.root.join("log", file_name).to_s
+      else
+        [Dir.pwd, "log", file_name].join("/").to_s
+      end
     end
 
     def self.build

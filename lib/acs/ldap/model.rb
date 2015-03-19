@@ -75,7 +75,7 @@ class Acs::Ldap::Model
 protected
 
   def logger
-    Acs::Ldap::Logger
+    Acs::Ldap.logger
   end
 
 end

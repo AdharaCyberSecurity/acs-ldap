@@ -1,6 +1,6 @@
 # Acs::Ldap
 
-TODO: Write a gem description
+ActiveRecord to LDAP adapter
 
 ## Installation
 

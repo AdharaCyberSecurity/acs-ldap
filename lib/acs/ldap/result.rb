@@ -37,6 +37,6 @@ class Acs::Ldap::Result
   end
 
   def logger
-    Acs::Ldap::Logger
+    Acs::Ldap.logger
   end
 end

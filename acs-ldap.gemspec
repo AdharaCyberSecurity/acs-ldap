@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.version       = Acs::Ldap::VERSION
   s.authors       = ["Terranova David"]
   s.email         = ["dterranova@adhara-cybersecurity.com"]
-  s.summary       = %q{LDAP utility}
-  s.description   = %q{LDAP utility}
+  s.summary       = %q{ActiveRecord to LDAP adapter}
+  s.description   = %q{ActiveRecord to LDAP adapter}
   s.homepage      = ""
   s.license       = "MIT"
 

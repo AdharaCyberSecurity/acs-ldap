@@ -10,8 +10,18 @@ require "acs/ldap/model"
 module Acs
   module Ldap
 
-    def self.lorem
-      "lorem"
+    def self.logger
+      @logger || Acs::Ldap::Logger
+    end
+
+    def self.logger=(logger)
+      @logger = logger
+    end
+
+    class Railtie < ::Rails::Railtie
+      initializer :acs_ldap do |app|
+        Acs::Ldap.logger = Rails.logger
+      end
     end
 
   end
