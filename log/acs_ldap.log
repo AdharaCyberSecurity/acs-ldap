@@ -1,0 +1,359 @@
+DEBUG : 15-03-20 14:44:00:951 +0400 : LDAP connect
+DEBUG : 15-03-20 14:44:00:951 +0400 : Binding to ldap...
+DEBUG : 15-03-20 14:44:00:951 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 14:44:00:963 +0400 : Connection succeed
+INFO : 15-03-20 14:44:00:964 +0400 : Search base '' filter '' attributes ''
+INFO : 15-03-20 14:44:00:979 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9bbf1d8 @myhash={:dn=>["dc=adharacs,dc=lan"], :objectclass=>["top", "dcObject", "organization"], :o=>["'LDAP Test'"], :dc=>["adharacs"]}>, #<Net::LDAP::Entry:0x007ff1e9bbda18 @myhash={:dn=>["cn=admin,dc=adharacs,dc=lan"], :objectclass=>["simpleSecurityObject", "organizationalRole"], :cn=>["admin"], :description=>["LDAP administrator"], :userpassword=>["{SSHA}gfWXs6CZOCDlQXMwol0YPSye3w12V/XU"]}>, #<Net::LDAP::Entry:0x007ff1e9bbc8c0 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>, #<Net::LDAP::Entry:0x007ff1e9bb7b18 @myhash={:dn=>["ou=mailbox,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["mailbox"]}>, #<Net::LDAP::Entry:0x007ff1e9bb5a48 @myhash={:dn=>["ou=alias,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["alias"]}>, #<Net::LDAP::Entry:0x007ff1eb91bb28 @myhash={:dn=>["ou=mailinglist,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["mailinglist"]}>, #<Net::LDAP::Entry:0x007ff1eb919c38 @myhash={:dn=>["ou=domain,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["domain"]}>, #<Net::LDAP::Entry:0x007ff1eb918900 @myhash={:dn=>["ou=vacation,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["vacation"]}>, #<Net::LDAP::Entry:0x007ff1eb913860 @myhash={:dn=>["ou=backup,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["backup"]}>, #<Net::LDAP::Entry:0x007ff1eb912258 @myhash={:dn=>["ou=vpn,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["vpn"]}>, #<Net::LDAP::Entry:0x007ff1eb910d40 @myhash={:dn=>["ou=service,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["service"]}>, #<Net::LDAP::Entry:0x007ff1eb90b4d0 @myhash={:dn=>["uid=postfix,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["postfix"], :userpassword=>["{SSHA}Eh7VTDYqC8qoZrvSkg68rMSnFoc3J5X3"]}>, #<Net::LDAP::Entry:0x007ff1eb9099c8 @myhash={:dn=>["uid=gnarwl,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["postfix", "gnarwl"], :userpassword=>["{SSHA}WNBFAIOiPCRBrg4aB5jGQBAjDKVeHB6c"]}>, #<Net::LDAP::Entry:0x007ff1e9bafe68 @myhash={:dn=>["uid=dovecot,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["dovecot"], :userpassword=>["{SSHA}hhmido6GNmtGo4iXqj7hdvIPAIxytxYY"]}>, #<Net::LDAP::Entry:0x007ff1e9bae400 @myhash={:dn=>["uid=saslauthd,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["saslauthd"], :userpassword=>["{SSHA}WsKuZD5GxtX8oSGx5ZLd2KUMMoSgNi74"]}>, #<Net::LDAP::Entry:0x007ff1e9bacdd0 @myhash={:dn=>["uid=radicale,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["radicale"], :userpassword=>["{SSHA}PyObb9eltm9LCr1OSVh9qzNhXO54q3K7"]}>, #<Net::LDAP::Entry:0x007ff1e9ba76f0 @myhash={:dn=>["uid=proftpd,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["proftpd"], :userpassword=>["{SSHA}rjeE6bAqX4UhLXLxMKSYT5qoXYjTuT8l"]}>, #<Net::LDAP::Entry:0x007ff1e9ba5e40 @myhash={:dn=>["uid=openvpn,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["openvpn"], :userpassword=>["{SSHA}5vaBhOIqxkNOgfhd4zUQJ3Qij+nCf3Jj"]}>]
+INFO : 15-03-20 14:44:00:980 +0400 : Add dn 'uid=1,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"john.doe", :cn=>"John Doe", :givenName=>"John Doe", :mail=>"john.doe@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+INFO : 15-03-20 14:44:00:997 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:009 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '(mail=john.doe@adharacs.lan)' attributes 'mail'
+INFO : 15-03-20 14:44:01:019 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb2a2468 @myhash={:dn=>["uid=1,ou=people,dc=adharacs,dc=lan"], :mail=>["john.doe@adharacs.lan"]}>]
+INFO : 15-03-20 14:44:01:020 +0400 : Delete dn 'uid=1,ou=people,dc=adharacs,dc=lan'
+INFO : 15-03-20 14:44:01:030 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+ERROR : 15-03-20 14:44:01:031 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:031 +0400 : Acs::Ldap::Mapper chain_method on object '[[[1, 2], 3], 4]' with chain 'shift.shift.shift' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method on object '[[1, 2], 3]' with chain 'shift.shift' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method on object '[1, 2]' with chain 'shift' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method returns '1'
+ERROR : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1ea0b33d8>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1ea0b30e0>' with chain 'get.get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1ea0b31a8>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:032 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 14:44:01:033 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:033 +0400 : Acs::Ldap::Mapper chain_method on object '[[[1, 2], 3], 4]' with chain 'shift:shift:shift' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:033 +0400 : Acs::Ldap::Mapper chain_method on object '[[1, 2], 3]' with chain 'shift:shift' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:033 +0400 : Acs::Ldap::Mapper chain_method on object '[1, 2]' with chain 'shift' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:034 +0400 : Acs::Ldap::Mapper chain_method returns '1'
+ERROR : 15-03-20 14:44:01:034 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:034 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1eb281bf0>' with chain 'get:get' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:034 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1eb281e98>' with chain 'get' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:034 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 14:44:01:035 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:035 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b36a90>' with chain 'get.get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:035 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b36b30>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:035 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 14:44:01:035 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:035 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b36ef0>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:035 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 14:44:01:036 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:036 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b25bf0>' with chain 'get.get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:036 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b26460>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:036 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 14:44:01:036 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:037 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b26938>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:037 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 14:44:01:037 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:037 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b04c20>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:038 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+DEBUG : 15-03-20 14:44:01:038 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007ff1e9b04c20>' with chain 'get2' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 14:44:01:038 +0400 : Acs::Ldap::Mapper chain_method returns 'value2'
+INFO : 15-03-20 14:44:01:038 +0400 : Delete all ou=people
+INFO : 15-03-20 14:44:01:039 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+DEBUG : 15-03-20 14:44:01:039 +0400 : LDAP connect
+DEBUG : 15-03-20 14:44:01:039 +0400 : Binding to ldap...
+DEBUG : 15-03-20 14:44:01:039 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 14:44:01:045 +0400 : Connection succeed
+INFO : 15-03-20 14:44:01:062 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb230fc0 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>]
+INFO : 15-03-20 14:44:01:062 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:072 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb212db8 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>]
+INFO : 15-03-20 14:44:01:073 +0400 : Add dn 'uid=2,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+INFO : 15-03-20 14:44:01:080 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:080 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:086 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb1a1f78 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>, #<Net::LDAP::Entry:0x007ff1eb19b678 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Dark Vador"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"]}>]
+INFO : 15-03-20 14:44:01:087 +0400 : Modify dn 'uid=2,ou=people,dc=adharacs,dc=lan' operations '[[:replace, "givenName", "Vador Dark"]]'
+INFO : 15-03-20 14:44:01:103 +0400 : Modify result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:103 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '(uid=2)' attributes ''
+INFO : 15-03-20 14:44:01:113 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9a470f8 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :sn=>["dark.vador"], :cn=>["dark.vador"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"], :givenname=>["Vador Dark"]}>]
+INFO : 15-03-20 14:44:01:114 +0400 : Delete dn 'uid=2,ou=people,dc=adharacs,dc=lan'
+INFO : 15-03-20 14:44:01:127 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:127 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:139 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9a2ff48 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>]
+INFO : 15-03-20 14:44:01:140 +0400 : Delete all ou=people
+INFO : 15-03-20 14:44:01:140 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+INFO : 15-03-20 14:44:01:149 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb0bad30 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>]
+INFO : 15-03-20 14:44:01:149 +0400 : Search base 'uid=2,ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:160 +0400 : Search result ERROR return code:32, matched_dn: ou=people,dc=adharacs,dc=lan, message:No Such Object, data:[]
+INFO : 15-03-20 14:44:01:160 +0400 : Add dn 'uid=2,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+INFO : 15-03-20 14:44:01:181 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:182 +0400 : Search base 'uid=2,ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:191 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb551678 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Vador Dark"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"]}>]
+INFO : 15-03-20 14:44:01:191 +0400 : Delete all ou=people
+INFO : 15-03-20 14:44:01:191 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+INFO : 15-03-20 14:44:01:200 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb963db0 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>, #<Net::LDAP::Entry:0x007ff1eb963630 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :uid=>["2"]}>]
+INFO : 15-03-20 14:44:01:200 +0400 : Delete dn 'uid=2,ou=people,dc=adharacs,dc=lan'
+INFO : 15-03-20 14:44:01:207 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+ERROR : 15-03-20 14:44:01:208 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+INFO : 15-03-20 14:44:01:208 +0400 : Delete all ou=people
+INFO : 15-03-20 14:44:01:209 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+DEBUG : 15-03-20 14:44:01:209 +0400 : LDAP connect
+DEBUG : 15-03-20 14:44:01:209 +0400 : Binding to ldap...
+DEBUG : 15-03-20 14:44:01:209 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 14:44:01:215 +0400 : Connection succeed
+INFO : 15-03-20 14:44:01:243 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9e3f868 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>]
+INFO : 15-03-20 14:44:01:243 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:249 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1ea14b610 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>]
+ERROR : 15-03-20 14:44:01:249 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'sn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'cn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'givenName' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:250 +0400 : Acs::Ldap::Mapper chain_method returns 'Dark Vador'
+DEBUG : 15-03-20 14:44:01:251 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'mail' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:251 +0400 : Acs::Ldap::Mapper chain_method returns 'dvador@adharacs.lan'
+DEBUG : 15-03-20 14:44:01:251 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'userPassword' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:251 +0400 : Acs::Ldap::Mapper chain_method returns '{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1'
+DEBUG : 15-03-20 14:44:01:251 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:251 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 14:44:01:251 +0400 : Pusher#create dn 'uid=2,ou=people,dc=adharacs,dc=lan' attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+DEBUG : 15-03-20 14:44:01:252 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:252 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 14:44:01:252 +0400 : Add dn 'uid=2,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+DEBUG : 15-03-20 14:44:01:252 +0400 : LDAP connect
+DEBUG : 15-03-20 14:44:01:252 +0400 : Binding to ldap...
+DEBUG : 15-03-20 14:44:01:252 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 14:44:01:258 +0400 : Connection succeed
+INFO : 15-03-20 14:44:01:266 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:266 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:284 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9de4ad0 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>, #<Net::LDAP::Entry:0x007ff1eb56abf0 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Dark Vador"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"]}>]
+ERROR : 15-03-20 14:44:01:285 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:285 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:285 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 14:44:01:285 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'sn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:286 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 14:44:01:286 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'cn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:286 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 14:44:01:286 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'givenName' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:286 +0400 : Acs::Ldap::Mapper chain_method returns 'Vador Dark'
+DEBUG : 15-03-20 14:44:01:286 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'mail' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:286 +0400 : Acs::Ldap::Mapper chain_method returns 'dvador@adharacs.lan'
+DEBUG : 15-03-20 14:44:01:287 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'userPassword' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:287 +0400 : Acs::Ldap::Mapper chain_method returns '{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1'
+DEBUG : 15-03-20 14:44:01:287 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:287 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 14:44:01:288 +0400 : Modify dn 'uid=2,ou=people,dc=adharacs,dc=lan' operations '[[:replace, "sn", "dark.vador"], [:replace, "cn", "dark.vador"], [:replace, "givenName", "Vador Dark"], [:replace, "mail", "dvador@adharacs.lan"], [:replace, "userPassword", "{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"]]'
+DEBUG : 15-03-20 14:44:01:288 +0400 : LDAP connect
+DEBUG : 15-03-20 14:44:01:288 +0400 : Binding to ldap...
+DEBUG : 15-03-20 14:44:01:288 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 14:44:01:293 +0400 : Connection succeed
+INFO : 15-03-20 14:44:01:300 +0400 : Modify result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:301 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '(uid=2)' attributes ''
+INFO : 15-03-20 14:44:01:326 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb98b720 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Vador Dark"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"]}>]
+ERROR : 15-03-20 14:44:01:326 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:326 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:327 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 14:44:01:327 +0400 : Delete dn 'uid=2,ou=people,dc=adharacs,dc=lan'
+DEBUG : 15-03-20 14:44:01:327 +0400 : LDAP connect
+DEBUG : 15-03-20 14:44:01:327 +0400 : Binding to ldap...
+DEBUG : 15-03-20 14:44:01:327 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 14:44:01:331 +0400 : Connection succeed
+INFO : 15-03-20 14:44:01:341 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 14:44:01:341 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:353 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1eb991670 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>]
+ERROR : 15-03-20 14:44:01:353 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+INFO : 15-03-20 14:44:01:354 +0400 : Delete all ou=people
+INFO : 15-03-20 14:44:01:354 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+DEBUG : 15-03-20 14:44:01:354 +0400 : LDAP connect
+DEBUG : 15-03-20 14:44:01:354 +0400 : Binding to ldap...
+DEBUG : 15-03-20 14:44:01:354 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 14:44:01:361 +0400 : Connection succeed
+INFO : 15-03-20 14:44:01:377 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9e57670 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>]
+DEBUG : 15-03-20 14:44:01:377 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:377 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 14:44:01:378 +0400 : Search base 'uid=2,ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:386 +0400 : Search result ERROR return code:32, matched_dn: ou=people,dc=adharacs,dc=lan, message:No Such Object, data:[]
+DEBUG : 15-03-20 14:44:01:387 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:387 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 14:44:01:387 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'sn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:387 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 14:44:01:387 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'cn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:388 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 14:44:01:388 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'givenName' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:388 +0400 : Acs::Ldap::Mapper chain_method returns 'Dark Vador'
+DEBUG : 15-03-20 14:44:01:388 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'mail' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:389 +0400 : Acs::Ldap::Mapper chain_method returns 'dvador@adharacs.lan'
+DEBUG : 15-03-20 14:44:01:389 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'userPassword' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:389 +0400 : Acs::Ldap::Mapper chain_method returns '{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1'
+DEBUG : 15-03-20 14:44:01:389 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:389 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 14:44:01:389 +0400 : Pusher#create dn 'uid=2,ou=people,dc=adharacs,dc=lan' attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+DEBUG : 15-03-20 14:44:01:389 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:390 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 14:44:01:390 +0400 : Add dn 'uid=2,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+INFO : 15-03-20 14:44:01:410 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+DEBUG : 15-03-20 14:44:01:411 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 14:44:01:411 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 14:44:01:411 +0400 : Search base 'uid=2,ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 14:44:01:420 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9e6c5c0 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Dark Vador"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"]}>]
+INFO : 15-03-20 14:44:01:420 +0400 : Delete all ou=people
+INFO : 15-03-20 14:44:01:420 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+INFO : 15-03-20 14:44:01:425 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007ff1e9e744c8 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>, #<Net::LDAP::Entry:0x007ff1e9dafb78 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :uid=>["2"]}>]
+INFO : 15-03-20 14:44:01:425 +0400 : Delete dn 'uid=2,ou=people,dc=adharacs,dc=lan'
+INFO : 15-03-20 14:44:01:436 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+DEBUG : 15-03-20 15:00:55:193 +0400 : LDAP connect
+DEBUG : 15-03-20 15:00:55:193 +0400 : Binding to ldap...
+DEBUG : 15-03-20 15:00:55:193 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 15:00:55:220 +0400 : Connection succeed
+INFO : 15-03-20 15:00:55:222 +0400 : Search base '' filter '' attributes ''
+INFO : 15-03-20 15:00:55:280 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b1ac6200 @myhash={:dn=>["dc=adharacs,dc=lan"], :objectclass=>["top", "dcObject", "organization"], :o=>["'LDAP Test'"], :dc=>["adharacs"]}>, #<Net::LDAP::Entry:0x007fd3b1ac4180 @myhash={:dn=>["cn=admin,dc=adharacs,dc=lan"], :objectclass=>["simpleSecurityObject", "organizationalRole"], :cn=>["admin"], :description=>["LDAP administrator"], :userpassword=>["{SSHA}gfWXs6CZOCDlQXMwol0YPSye3w12V/XU"]}>, #<Net::LDAP::Entry:0x007fd3b192e618 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>, #<Net::LDAP::Entry:0x007fd3b192cc78 @myhash={:dn=>["ou=mailbox,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["mailbox"]}>, #<Net::LDAP::Entry:0x007fd3b1927458 @myhash={:dn=>["ou=alias,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["alias"]}>, #<Net::LDAP::Entry:0x007fd3b1925f90 @myhash={:dn=>["ou=mailinglist,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["mailinglist"]}>, #<Net::LDAP::Entry:0x007fd3b19247d0 @myhash={:dn=>["ou=domain,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["domain"]}>, #<Net::LDAP::Entry:0x007fd3b2bff1c0 @myhash={:dn=>["ou=vacation,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["vacation"]}>, #<Net::LDAP::Entry:0x007fd3b2bfd910 @myhash={:dn=>["ou=backup,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["backup"]}>, #<Net::LDAP::Entry:0x007fd3b2bfc6f0 @myhash={:dn=>["ou=vpn,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["vpn"]}>, #<Net::LDAP::Entry:0x007fd3b2bf73d0 @myhash={:dn=>["ou=service,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["service"]}>, #<Net::LDAP::Entry:0x007fd3b2bf5968 @myhash={:dn=>["uid=postfix,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["postfix"], :userpassword=>["{SSHA}Eh7VTDYqC8qoZrvSkg68rMSnFoc3J5X3"]}>, #<Net::LDAP::Entry:0x007fd3b2bf78d0 @myhash={:dn=>["uid=gnarwl,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["postfix", "gnarwl"], :userpassword=>["{SSHA}WNBFAIOiPCRBrg4aB5jGQBAjDKVeHB6c"]}>, #<Net::LDAP::Entry:0x007fd3b2bed8a8 @myhash={:dn=>["uid=dovecot,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["dovecot"], :userpassword=>["{SSHA}hhmido6GNmtGo4iXqj7hdvIPAIxytxYY"]}>, #<Net::LDAP::Entry:0x007fd3b2be74a8 @myhash={:dn=>["uid=saslauthd,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["saslauthd"], :userpassword=>["{SSHA}WsKuZD5GxtX8oSGx5ZLd2KUMMoSgNi74"]}>, #<Net::LDAP::Entry:0x007fd3b2be5310 @myhash={:dn=>["uid=radicale,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["radicale"], :userpassword=>["{SSHA}PyObb9eltm9LCr1OSVh9qzNhXO54q3K7"]}>, #<Net::LDAP::Entry:0x007fd3b2bdf690 @myhash={:dn=>["uid=proftpd,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["proftpd"], :userpassword=>["{SSHA}rjeE6bAqX4UhLXLxMKSYT5qoXYjTuT8l"]}>, #<Net::LDAP::Entry:0x007fd3b2bddfc0 @myhash={:dn=>["uid=openvpn,ou=service,dc=adharacs,dc=lan"], :objectclass=>["account", "simpleSecurityObject", "top"], :uid=>["openvpn"], :userpassword=>["{SSHA}5vaBhOIqxkNOgfhd4zUQJ3Qij+nCf3Jj"]}>]
+INFO : 15-03-20 15:00:55:293 +0400 : Add dn 'uid=1,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"john.doe", :cn=>"John Doe", :givenName=>"John Doe", :mail=>"john.doe@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+INFO : 15-03-20 15:00:55:317 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 15:00:55:321 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '(mail=john.doe@adharacs.lan)' attributes 'mail'
+INFO : 15-03-20 15:00:55:333 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b2a7f278 @myhash={:dn=>["uid=1,ou=people,dc=adharacs,dc=lan"], :mail=>["john.doe@adharacs.lan"]}>]
+INFO : 15-03-20 15:00:55:333 +0400 : Delete dn 'uid=1,ou=people,dc=adharacs,dc=lan'
+INFO : 15-03-20 15:00:55:349 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+ERROR : 15-03-20 15:00:55:350 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:350 +0400 : Acs::Ldap::Mapper chain_method on object '[[[1, 2], 3], 4]' with chain 'shift.shift.shift' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:350 +0400 : Acs::Ldap::Mapper chain_method on object '[[1, 2], 3]' with chain 'shift.shift' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:350 +0400 : Acs::Ldap::Mapper chain_method on object '[1, 2]' with chain 'shift' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:350 +0400 : Acs::Ldap::Mapper chain_method returns '1'
+ERROR : 15-03-20 15:00:55:350 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:350 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b2ac4bc0>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:351 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 15:00:55:351 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:351 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b2ac4a58>' with chain 'get.get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:351 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b2ac4b48>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:351 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 15:00:55:352 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:352 +0400 : Acs::Ldap::Mapper chain_method on object '[[[1, 2], 3], 4]' with chain 'shift:shift:shift' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:352 +0400 : Acs::Ldap::Mapper chain_method on object '[[1, 2], 3]' with chain 'shift:shift' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:352 +0400 : Acs::Ldap::Mapper chain_method on object '[1, 2]' with chain 'shift' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:352 +0400 : Acs::Ldap::Mapper chain_method returns '1'
+ERROR : 15-03-20 15:00:55:352 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:352 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b1aa6b30>' with chain 'get:get' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:353 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b1aa6e28>' with chain 'get' separator ':' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:353 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 15:00:55:353 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:354 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b2b76b18>' with chain 'get.get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:354 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b2b76b68>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:354 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 15:00:55:354 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:354 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b2b76d48>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:354 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 15:00:55:355 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:355 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b1a87f28>' with chain 'get.get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:355 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b1a8fe80>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:356 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 15:00:55:356 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:356 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b1a8f200>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:356 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+ERROR : 15-03-20 15:00:55:357 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:357 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b1a6f9f0>' with chain 'get' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:357 +0400 : Acs::Ldap::Mapper chain_method returns 'test'
+DEBUG : 15-03-20 15:00:55:357 +0400 : Acs::Ldap::Mapper chain_method on object '#<TestObject:0x007fd3b1a6f9f0>' with chain 'get2' separator '.' force_method_calls 'false'
+DEBUG : 15-03-20 15:00:55:357 +0400 : Acs::Ldap::Mapper chain_method returns 'value2'
+ERROR : 15-03-20 15:00:55:358 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+INFO : 15-03-20 15:00:55:358 +0400 : Delete all ou=people
+INFO : 15-03-20 15:00:55:358 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+DEBUG : 15-03-20 15:00:55:358 +0400 : LDAP connect
+DEBUG : 15-03-20 15:00:55:358 +0400 : Binding to ldap...
+DEBUG : 15-03-20 15:00:55:358 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 15:00:55:368 +0400 : Connection succeed
+INFO : 15-03-20 15:00:55:393 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b19ff4e8 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>]
+INFO : 15-03-20 15:00:55:393 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 15:00:55:403 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b19ddb68 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>]
+ERROR : 15-03-20 15:00:55:404 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:404 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:404 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 15:00:55:404 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'sn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:404 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 15:00:55:404 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'cn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:404 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'givenName' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method returns 'Dark Vador'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'mail' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method returns 'dvador@adharacs.lan'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'userPassword' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method returns '{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:405 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 15:00:55:406 +0400 : Pusher#create dn 'uid=2,ou=people,dc=adharacs,dc=lan' attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+DEBUG : 15-03-20 15:00:55:406 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:406 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 15:00:55:406 +0400 : Add dn 'uid=2,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+DEBUG : 15-03-20 15:00:55:406 +0400 : LDAP connect
+DEBUG : 15-03-20 15:00:55:406 +0400 : Binding to ldap...
+DEBUG : 15-03-20 15:00:55:406 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 15:00:55:413 +0400 : Connection succeed
+INFO : 15-03-20 15:00:55:435 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 15:00:55:436 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 15:00:55:463 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b2a67218 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>, #<Net::LDAP::Entry:0x007fd3b196e7e0 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Dark Vador"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"]}>]
+ERROR : 15-03-20 15:00:55:463 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:463 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:463 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 15:00:55:463 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'sn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'cn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'givenName' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method returns 'Vador Dark'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'mail' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method returns 'dvador@adharacs.lan'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'userPassword' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:464 +0400 : Acs::Ldap::Mapper chain_method returns '{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1'
+DEBUG : 15-03-20 15:00:55:465 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Vador Dark", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:465 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 15:00:55:465 +0400 : Modify dn 'uid=2,ou=people,dc=adharacs,dc=lan' operations '[[:replace, "sn", "dark.vador"], [:replace, "cn", "dark.vador"], [:replace, "givenName", "Vador Dark"], [:replace, "mail", "dvador@adharacs.lan"], [:replace, "userPassword", "{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"]]'
+DEBUG : 15-03-20 15:00:55:465 +0400 : LDAP connect
+DEBUG : 15-03-20 15:00:55:466 +0400 : Binding to ldap...
+DEBUG : 15-03-20 15:00:55:466 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 15:00:55:471 +0400 : Connection succeed
+INFO : 15-03-20 15:00:55:479 +0400 : Modify result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 15:00:55:479 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '(uid=2)' attributes ''
+INFO : 15-03-20 15:00:55:501 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b18b48b8 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Vador Dark"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"]}>]
+ERROR : 15-03-20 15:00:55:501 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:501 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:502 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 15:00:55:502 +0400 : Delete dn 'uid=2,ou=people,dc=adharacs,dc=lan'
+DEBUG : 15-03-20 15:00:55:502 +0400 : LDAP connect
+DEBUG : 15-03-20 15:00:55:502 +0400 : Binding to ldap...
+DEBUG : 15-03-20 15:00:55:502 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 15:00:55:512 +0400 : Connection succeed
+INFO : 15-03-20 15:00:55:540 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+INFO : 15-03-20 15:00:55:540 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 15:00:55:570 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b2ec5ee0 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"], :objectclass=>["organizationalUnit", "top"], :ou=>["people"]}>]
+ERROR : 15-03-20 15:00:55:571 +0400 : Acs::Ldap::Mapper with options methods_separator '.' force_method_calls 'true'
+INFO : 15-03-20 15:00:55:571 +0400 : Delete all ou=people
+INFO : 15-03-20 15:00:55:571 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+DEBUG : 15-03-20 15:00:55:572 +0400 : LDAP connect
+DEBUG : 15-03-20 15:00:55:572 +0400 : Binding to ldap...
+DEBUG : 15-03-20 15:00:55:572 +0400 : Connection params: {:host=>"192.168.59.103", :port=>49389, :base=>"dc=adharacs,dc=lan", :auth=>{:method=>:simple, :username=>"cn=admin,dc=adharacs,dc=lan", :password=>"admin"}}
+DEBUG : 15-03-20 15:00:55:585 +0400 : Connection succeed
+INFO : 15-03-20 15:00:55:615 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b30e5a18 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>]
+DEBUG : 15-03-20 15:00:55:615 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:615 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 15:00:55:616 +0400 : Search base 'uid=2,ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 15:00:55:631 +0400 : Search result ERROR return code:32, matched_dn: ou=people,dc=adharacs,dc=lan, message:No Such Object, data:[]
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'sn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'cn' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method returns 'dark.vador'
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'givenName' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:632 +0400 : Acs::Ldap::Mapper chain_method returns 'Dark Vador'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'mail' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method returns 'dvador@adharacs.lan'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'userPassword' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method returns '{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Pusher#create dn 'uid=2,ou=people,dc=adharacs,dc=lan' attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:633 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 15:00:55:633 +0400 : Add dn 'uid=2,ou=people,dc=adharacs,dc=lan'  attributes '{:sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :mail=>"dvador@adharacs.lan", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :objectClass=>["organizationalPerson", "person", "top", "extensibleObject"]}'
+INFO : 15-03-20 15:00:55:643 +0400 : Add result SUCCESS return code:0, matched_dn: , message:Success, data:nil
+DEBUG : 15-03-20 15:00:55:643 +0400 : Acs::Ldap::Mapper chain_method on object '{:id=>2, :sn=>"dark.vador", :cn=>"dark.vador", :givenName=>"Dark Vador", :userPassword=>"{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", :mail=>"dvador@adharacs.lan"}' with chain 'id' separator '.' force_method_calls 'true'
+DEBUG : 15-03-20 15:00:55:643 +0400 : Acs::Ldap::Mapper chain_method returns '2'
+INFO : 15-03-20 15:00:55:643 +0400 : Search base 'uid=2,ou=people,dc=adharacs,dc=lan' filter '' attributes ''
+INFO : 15-03-20 15:00:55:649 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b1cf41a8 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :sn=>["dark.vador"], :cn=>["dark.vador"], :givenname=>["Dark Vador"], :mail=>["dvador@adharacs.lan"], :userpassword=>["{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1"], :objectclass=>["organizationalPerson", "person", "top", "extensibleObject"], :uid=>["2"]}>]
+INFO : 15-03-20 15:00:55:650 +0400 : Delete all ou=people
+INFO : 15-03-20 15:00:55:650 +0400 : Search base 'ou=people,dc=adharacs,dc=lan' filter '' attributes 'uid'
+INFO : 15-03-20 15:00:55:659 +0400 : Search result SUCCESS return code:0, matched_dn: , message:Success, data:[#<Net::LDAP::Entry:0x007fd3b2ea7620 @myhash={:dn=>["ou=people,dc=adharacs,dc=lan"]}>, #<Net::LDAP::Entry:0x007fd3b2ea6860 @myhash={:dn=>["uid=2,ou=people,dc=adharacs,dc=lan"], :uid=>["2"]}>]
+INFO : 15-03-20 15:00:55:659 +0400 : Delete dn 'uid=2,ou=people,dc=adharacs,dc=lan'
+INFO : 15-03-20 15:00:55:669 +0400 : Delete result SUCCESS return code:0, matched_dn: , message:Success, data:nil

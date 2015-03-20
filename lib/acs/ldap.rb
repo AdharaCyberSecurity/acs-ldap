@@ -5,7 +5,8 @@ require "acs/ldap/version"
 require "acs/ldap/logger"
 require "acs/ldap/result"
 require "acs/ldap/connector"
-require "acs/ldap/model"
+require "acs/ldap/pusher"
+require "acs/ldap/mapper"
 
 module Acs
   module Ldap
