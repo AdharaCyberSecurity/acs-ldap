@@ -41,8 +41,16 @@ describe Acs::Ldap::Pusher, order: :defined do
 
   it "should be possible to update a User" do
     @user.givenName = "Vador Dark"
-    expect(@pusher.update(@user, :givenName).success?).to eq true
+    expect(@pusher.update(@user).success?).to eq true
     expect(@pusher.find_by('uid', 2).data[0][:givenName]).to eq ["Vador Dark"]
+  end
+
+  it "should be possible to update only an attribute for a User" do
+    @user.givenName = "D V"
+    @user.mail = "dv@adharacs.lan"
+    expect(@pusher.update(@user, {changes: {givenName: ["Vador Dark" => "D V"]}}).success?).to eq true
+    expect(@pusher.find_by('uid', 2).data[0][:givenName]).to eq ["D V"]
+    expect(@pusher.find_by('uid', 2).data[0][:mail]).to eq ["dvador@adharacs.lan"]
   end
 
   it "should be possible to remove a User" do

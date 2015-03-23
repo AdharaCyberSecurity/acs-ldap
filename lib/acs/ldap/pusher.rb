@@ -11,7 +11,7 @@ class Acs::Ldap::Pusher
     @mapper = mapper
   end
 
-  def save(model)
+  def save(model, options = {})
     if exist?(model)
       update(model)
     else
@@ -19,7 +19,7 @@ class Acs::Ldap::Pusher
     end
   end
 
-  def create(model)
+  def create(model, options = {})
     attributes = @mapper.attributes(model).except!(:uid)
     attributes.merge!(objectClass: @mapper.object_class)
 
@@ -31,11 +31,18 @@ class Acs::Ldap::Pusher
     )
   end
 
-  def update(model, attributes = nil)
+  def update(model, options = {})
+    changes = options.fetch(:changes, nil)
     attributes = @mapper.attributes(model).except(:uid)
     operations = []
     attributes.each do |key, value|
-      operations << [:replace, key.to_s, value] if attributes.nil? or attributes.include?(key)
+      if attributes.nil? or attributes.include?(key)
+        if changes.nil?
+          operations << [:replace, key.to_s, value]
+        else
+          operations << [:replace, key.to_s, value] if changes.has_key?(key)
+        end
+      end
     end
 
     @connector.update(
@@ -44,7 +51,7 @@ class Acs::Ldap::Pusher
     )
   end
 
-  def destroy(model)
+  def destroy(model, options = {})
     @connector.delete(dn(model))
   end
 
