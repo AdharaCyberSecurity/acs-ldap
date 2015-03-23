@@ -15,7 +15,7 @@ class Acs::Ldap::Mapper
     @ou = ou
     @method_separator = options[:method_separator] || '.'
     @force_method_calls = options[:force_method_calls] || false
-    Acs::Ldap::logger.error "Acs::Ldap::Mapper with options methods_separator '#{@method_separator}' force_method_calls '#{@force_method_calls}'"
+    Acs::Ldap::logger.debug "Acs::Ldap::Mapper with options methods_separator '#{@method_separator}' force_method_calls '#{@force_method_calls}'"
   end
 
   # Populate a hash based on the provided mapping and object
