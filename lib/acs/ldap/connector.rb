@@ -108,8 +108,9 @@ class Acs::Ldap::Connector
     if @connected
       @ldap
     else
-      connect
+      @ldap = connect
     end
+    @ldap
   end
 
 protected
@@ -120,12 +121,19 @@ protected
     if ! @connected
       logger.debug "Binding to ldap..."
       @ldap = Net::LDAP.new(ldap_params)
-      if @ldap.bind
-        logger.debug "Connection succeed"
-        @connected = true
-      else
+      begin
+        if @ldap.bind
+          logger.debug "Connection succeed"
+          @connected = true
+        else
+          @connected = false
+          @ldap = nil
+          logger.debug "Connection failed"
+        end
+      rescue Net::LDAP::Error => e
+        logger.error "Connection refused '#{e.inspect}'"
         @connected = false
-        logger.debug "Connection failed"
+        @ldap = nil
       end
       @ldap
     else
