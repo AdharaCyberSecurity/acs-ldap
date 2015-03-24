@@ -121,7 +121,6 @@ protected
     if ! @connected
       logger.debug "Binding to ldap..."
       @ldap = Net::LDAP.new(ldap_params)
-      begin
         if @ldap.bind
           logger.debug "Connection succeed"
           @connected = true
@@ -130,11 +129,6 @@ protected
           @ldap = nil
           logger.debug "Connection failed"
         end
-      rescue Net::LDAP::Error => e
-        logger.error "Connection refused '#{e.inspect}'"
-        @connected = false
-        @ldap = nil
-      end
       @ldap
     else
       @logger.debug "LDAP already connected"

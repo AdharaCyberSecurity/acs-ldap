@@ -15,7 +15,7 @@ describe Acs::Ldap::Connector, order: :defined do
 
   it "should return an error if a connection failed" do
     connector = Acs::Ldap::Connector.new({host: '127.0.0.1', port: 49390, base: "dc=adharacs,dc=lan", dn: "cn=admin,dc=adharacs,dc=lan", password: "admin"})
-    expect(connector.get_connection()).to be_nil
+    expect {connector.get_connection() }.to raise_exception(Net::LDAP::Error)
   end
 
   it "should be possible to search without specs" do
