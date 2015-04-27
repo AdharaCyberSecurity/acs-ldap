@@ -46,7 +46,11 @@ class Acs::Ldap::Logger < ::Logger
     end
 
     def self.size
-      File.new(file_path).size
+      if File.exist?(file_path)
+        File.new(file_path).size
+      else
+        0
+      end
     end
 
     def self.targz_file_path
