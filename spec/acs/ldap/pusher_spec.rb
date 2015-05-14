@@ -25,7 +25,7 @@ describe Acs::Ldap::Pusher, order: :defined do
       }
     )
     @pusher = Acs::Ldap::Pusher.new(@connector, {mapper: @mapper})
-    @pusher.mapper = @mapper
+    #@pusher.mapper = @mapper
     @user = User.new({id: 2, sn: "dark.vador", cn: "dark.vador", givenName: "Dark Vador", userPassword: "{SSHA}+MBMtUqzkOeH8hI1KVnl+djdqzw0YmU5M2Y5MmQyOTgxMDU1", mail: "dvador@adharacs.lan"})
   end
 

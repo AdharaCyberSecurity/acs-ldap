@@ -81,6 +81,10 @@ class Acs::Ldap::Pusher
     @connector.search({base: base, filter: filter}).data.count
   end
 
+  def connector
+    @connector
+  end
+
 protected
 
   def ou
