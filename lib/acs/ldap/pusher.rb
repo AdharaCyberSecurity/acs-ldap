@@ -19,6 +19,11 @@ class Acs::Ldap::Pusher
     end
   end
 
+  def index
+    filter = Net::LDAP::Filter.pres('uid')
+    @connector.search({base: base, filter: filter})
+  end
+
   def create(model, options = {})
     attributes = @mapper.attributes(model).except!(:uid)
     attributes.merge!(objectClass: @mapper.object_class)
@@ -72,11 +77,8 @@ class Acs::Ldap::Pusher
   end
 
   def count
-    count = 0
-    @connector.search({base: base}).data.each do |entry|
-      count += 1 if entry[:uid].present?
-    end
-    count
+    filter = Net::LDAP::Filter.pres('uid')
+    @connector.search({base: base, filter: filter}).data.count
   end
 
 protected
