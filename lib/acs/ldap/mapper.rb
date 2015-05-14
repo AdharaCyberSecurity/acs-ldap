@@ -85,7 +85,7 @@ protected
   def _chain_methods(object, chain_method, options = {})
     separator = options[:separator] || '.'
     force_method_calls = options[:force_method_calls] || false
-    Acs::Ldap.logger.debug "Acs::Ldap::Mapper chain_method on object '#{object}' with chain '#{chain_method}' separator '#{separator}'"
+    #Acs::Ldap.logger.debug "Acs::Ldap::Mapper chain_method on object '#{object}' with chain '#{chain_method}' separator '#{separator}'"
     methods = chain_method.to_s.split(separator)
     if methods.length > 1
       method = methods.shift.to_sym
@@ -93,7 +93,7 @@ protected
       return chain_methods(child_object, methods.join(separator), options)
     else
       value = object.send(methods[0].to_sym)
-      Acs::Ldap.logger.debug "Acs::Ldap::Mapper chain_method returns '#{value}'"
+      #Acs::Ldap.logger.debug "Acs::Ldap::Mapper chain_method returns '#{value}'"
       return value
     end
   end

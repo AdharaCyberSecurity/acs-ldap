@@ -32,7 +32,7 @@ class Acs::Ldap::Result
   end
 
   def to_s
-    result = success? ? 'SUCCESS' : 'ERROR'
+    result = success? ? 'SUCCESS' : 'FAILED'
     "#{result} return code:#{@code}, matched_dn: #{@dn}, message:#{@message}, data:#{@data.inspect}"
   end
 
